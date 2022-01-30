@@ -1,22 +1,22 @@
 {
   "name": "nyaa-downloader-for-plex",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "packageManager": "yarn@3.1.1",
+  "main": "index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "nodemon -w index.mjs",
+    "start": "node index.mjs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MystK/nyaa-downloader-for-plex.git"
+  "dependencies": {
+    "node-fetch": "^3.2.0",
+    "rss-parser": "^3.12.0"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MystK/nyaa-downloader-for-plex/issues"
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "nodemon": "^2.0.15"
   },
-  "homepage": "https://github.com/MystK/nyaa-downloader-for-plex#readme",
   "volta": {
-    "node": "16.13.2"
+    "node": "16.11.0"
   }
 }
