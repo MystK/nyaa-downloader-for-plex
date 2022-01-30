@@ -18,7 +18,7 @@ const downloadTorrent = async ({ title, link }) => {
 (async () => {
   const resp = await fetch('https://nyaa.si/?page=rss&q=1080p+SubsPlease&c=1_2&f=0');
   const rssText = await resp.text();
-  await fs.writeFile('./rss.txt', rssText);
+  await fs.writeFile('./lastRss.txt', rssText);
   const lastCheckedTitle = (await fs.readFile('./lastCheckedTitle.txt')).toString();
   // const rssText = await fs.readFile('./lastRss.txt');
 
