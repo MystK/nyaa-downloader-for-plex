@@ -1,0 +1,1 @@
+C:\Windows\System32\wscript.exe D:\dev\nyaa-downloader-for-plex\scripts\runHidden.vbs D:\dev\nyaa-downloader-for-plex\scripts\start.bat

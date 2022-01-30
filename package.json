@@ -1,10 +1,10 @@
 {
   "name": "nyaa-downloader-for-plex",
   "packageManager": "yarn@3.1.1",
-  "main": "index.mjs",
+  "bin": "index.mjs",
   "scripts": {
-    "start:dev": "nodemon -w index.mjs",
-    "start": "node index.mjs"
+    "start": "node index.mjs",
+    "start:dev": "nodemon -w index.mjs index.mjs"
   },
   "dependencies": {
     "node-fetch": "^3.2.0",

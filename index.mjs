@@ -1,6 +1,5 @@
 import fetch from 'node-fetch';
 import fs from 'fs/promises';
-import { createWriteStream } from 'fs';
 import Parser from 'rss-parser';
 import path from 'path';
 
@@ -13,8 +12,7 @@ const config = {
 const downloadTorrent = async ({ title, link }) => {
   const downloadPath = path.resolve(config.torrentSaveDirectory, `${title}.torrent`);
   const torrentResp = await fetch(link);
-  const fileStream = createWriteStream(downloadPath);
-  torrentResp.body.pipe(fileStream);
+  fs.writeFile(downloadPath, Buffer.from(await torrentResp.arrayBuffer(0)));
 };
 
 (async () => {
